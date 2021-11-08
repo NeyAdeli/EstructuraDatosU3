@@ -1,0 +1,67 @@
+#include <iostream>
+
+using namespace std;
+
+class Automovil {
+	public:
+		Automovil();
+		void set_detalles();
+		void set_numPuertas(int puertas );
+		void get_detalles() const;
+		int get_numPuertas() const;
+	private:
+		string fabricante;
+		int numPuertas;
+		int numCilidros;
+		int tamanioMotor;
+};
+
+
+Automovil::Automovil(){
+	numPuertas = 0;
+	numCilidros = 0;
+	tamanioMotor = 0;
+}
+
+void Automovil::set_detalles(){
+	cout << "Introduce el fabricante: ";
+	cin >> fabricante;
+	cout << "Cuantas puertas? ";
+	cin >> numPuertas;
+	cout << "Cuantos cilindros? ";
+	cin >> numCilidros;
+	cout << "Que tamanio de motor? ";
+	cin >>tamanioMotor;
+}
+
+void Automovil::set_numPuertas(int puertas){
+	this->numPuertas = puertas; 
+}
+
+void Automovil::get_detalles() const{
+	cout << "Fabricante: " << fabricante << endl;
+	cout << "Puertas: " << numPuertas << endl;
+	cout << "Cilindros " << numCilidros << endl;
+	cout << "Motor? " << tamanioMotor << tamanioMotor << endl;
+}
+
+int Automovil::get_numPuertas() const {
+cout << "Puertas: " << numPuertas << endl;
+}
+
+int main(){
+	Automovil miCarro;
+	miCarro.set_detalles();
+	
+	Automovil carroDeErick;
+	carroDeErick.set_detalles();
+	
+	Automovil carroDeManuel;
+	carroDeManuel.set_detalles();
+	
+	miCarro.get_detalles();
+	carroDeErick.get_detalles();
+	carroDeManuel.get_detalles();
+	
+	return 0;
+}
